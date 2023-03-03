@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+      body {
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #api .heading,
+      #api .intro,
+      #api .error,
+      #api .pageLevel,
+      #api .divider,
+      #api .create {
+        display: none;
+      }
+
+      #api {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+        align-items: center;
+      }
+
+      #api #localAccountForm .entry .entry-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 11px 0px 8px;
+      }
+
+      #api #localAccountForm .entry .entry-item label,
+      #api #localAccountForm .entry .entry-item .password-label label {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.25rem;
+        color: #201f1e;
+      }
+
+      #api #localAccountForm .entry .entry-item .password-label {
+        padding-bottom: 5px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      #api #localAccountForm .entry .entry-item .password-label label {
+        padding-bottom: 0px;
+      }
+
+      #api #localAccountForm {
+        min-width: 15.063rem;
+        width: 100%;
+      }
+
+      #api #localAccountForm .entry .entry-item input {
+        width: 100%;
+        height: 32px;
+        padding: 6px 8px;
+        box-sizing: border-box;
+        border: 1px solid #8a8886;
+        border-radius: 2px;
+      }
+
+      #api input:-webkit-autofill {
+        background-color: #ffffff !important;
+      }
+      #api input:-webkit-autofill,
+      #api input:-webkit-autofill:hover,
+      #api input:-webkit-autofill:focus,
+      #api input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+      }
+
+      #api #localAccountForm .entry .buttons {
+        width: 100%;
+        height: 34px;
+        display: flex;
+        justify-content: end;
+        padding-top: 2rem;
+        margin-right: 3px;
+      }
+
+      #api #localAccountForm .entry .buttons button,
+      .accountButton {
+        background-color: #000000;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        font-weight: 600;
+        padding: 6px 20px;
+        white-space: nowrap;
+        color: #ffffff;
+        font-family: "Segoe UI";
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        bottom: 6px;
+        left: 0px;
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 24px;
+        color: #222222;
+      }
+
+      #api u {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #201f1e;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        text-decoration: none;
+      }
+
+      #api a {
+        color: #201f1e;
+        text-decoration: none;
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      #api a:hover {
+        color: -webkit-link;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      #api #forgotPassword {
+        margin-left: 0.75rem;
+      }
+      #api p {
+        margin: 0 0 0.25rem 0;
+        font-family: "Segoe UI";
+        font-size: 12px;
+        color: #a80000;
+      }
+
+      .login-parent-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .login-body-container {
+        min-height: 23rem;
+        display: flex;
+      }
+
+      .clinisys-logo-container {
+        width: 240px;
+        align-items: center;
+        background-color: #ffce00;
+        display: grid;
+      }
+
+      .clinisys-logo {
+        width: 10.5rem;
+      }
+
+      .login-form-container {
+        min-width: 25rem;
+        background-color: white;
+        padding: 0px 55px 0px 55px;
+        box-sizing: border-box;
+      }
+
+      .login-inner {
+        height: 100%;
+        position: relative;
+        display: flex;
+      }
+
+      .claims-provider-list-buttons {
+        display: none;
+      }
+    </style>
+</head>
+<body><noscript><div id="no_js" ><div class="error_container"><div><h1>We can't sign you in</h1><p>Your browser is currently set to block JavaScript. You need to allow JavaScript to use this service.</p><p>To learn how to allow JavaScript or to find out whether your browser supports JavaScript, check the online help in your web browser.</p></div></div></div></noscript><div id="no_cookie" class="no_display"><div class="error_container"><div><h1>We can't sign you in</h1><p>Your browser is currently set to block cookies. You need to allow cookies to use this service.</p><p>Cookies are small text files stored on your computer that tell us when you're signed in. To learn how to allow cookies, check the online help in your web browser.</p><script nonce="upF6cmA0QHbezesImYGptA==">if (!navigator.cookieEnabled) document.getElementById('no_cookie').className = ''; if (typeof $diags !== 'undefined') $diags.initializationSuccessful = true;</script></div></div></div>
+<div class="login-parent-container">
+      <div class="login-body-container">
+        <div class="clinisys-logo-container">
+        	<img class="clinisys-logo" src="src/assets/images/login-left-panel.svg" alt="ClinisysLogo">
+        </div>
+        <div class="login-form-container">
+          <div class="login-inner">
+            <div id="api" data-name="Unified">
+      
+        
+      <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount" aria-label="Sign in with your email address">
+        <div class="intro">
+          <h2 aria-level="1">
+            Sign in with your email address
+          </h2>
+        </div>
+        <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
+          <p></p>
+        </div>
+        <div class="entry">
+          <div class="entry-item">
+            <label for="email">
+              User name
+            </label>
+            <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
+              <p></p>
+            </div>
+            <input type="email" id="email" name="Email Address" title="Please enter a valid Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autofocus="" aria-label="Email Address">
+          </div>
+            <div class="entry-item">
+              <div class="password-label">
+                <label for="password">Password</label>
+                    <u><a id="forgotPassword" href="/clinisyswam.onmicrosoft.com/B2C_1_WAS_SignIn/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPassword&amp;csrf_token=MEpHTjJLSmRsUzBuVzZXM2oxT051NnVSTENJSnBFYUI2TDFoZzhDQ2xnbmFmZEJOdy9YbkUwanB3ejRESEZuLzRVekhzMU1xTzZkZHVNQXVKNnlwc0E9PTsyMDIzLTAzLTAxVDEyOjQ0OjI0LjgxMTgzNzRaOytKRDlvMm5SYmZ4emRoL2lQNGI4akE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJmYzljZmZmNC0xNmRmLTQyY2QtOWI5ZS0yMTliMzg4YmM5MzAifQ&amp;p=B2C_1_WAS_SignIn">Forgot your password?</a></u>
+                              </div>
+              <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                <p role="alert"></p>
+              </div>
+              <input type="password" id="password" name="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
+                          </div>
+          <div class="working"></div>
+
+
+          <div class="buttons">
+            <button id="next" type="submit" form="localAccountForm">Sign in</button>
+          </div>
+        </div>
+              <div class="divider">
+                <h2>OR</h2>
+              </div>
+              <div class="create">
+                <p>
+                  Don't have an account?<a id="createAccount" href="/clinisyswam.onmicrosoft.com/B2C_1_WAS_SignIn/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=MEpHTjJLSmRsUzBuVzZXM2oxT051NnVSTENJSnBFYUI2TDFoZzhDQ2xnbmFmZEJOdy9YbkUwanB3ejRESEZuLzRVekhzMU1xTzZkZHVNQXVKNnlwc0E9PTsyMDIzLTAzLTAxVDEyOjQ0OjI0LjgxMTgzNzRaOytKRDlvMm5SYmZ4emRoL2lQNGI4akE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJmYzljZmZmNC0xNmRmLTQyY2QtOWI5ZS0yMTliMzg4YmM5MzAifQ&amp;p=B2C_1_WAS_SignIn">Sign up now</a>
+                </p>
+              </div>
+      </form>
+  </div>
+            <span>© 2023 Clinisys, all rights reserved</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const emailId = document.getElementById("email");
+      emailId.removeAttribute("placeholder");
+      const password = document.getElementById("password");
+      password.removeAttribute("placeholder");
+    </script></body>
+</body>
+</html>
+
